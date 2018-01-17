@@ -1,5 +1,5 @@
 <template>
-  <i-menu mode="horizontal" theme="light" activeName="login">
+  <!-- <i-menu mode="horizontal" theme="light" activeName="login">
     <i-menu-item name="show">
       <router-link :to="{path:'/index/show'}">主页</router-link>
     </i-menu-item>
@@ -30,7 +30,23 @@
         <router-link :to="{path:'/store/gift'}">积分商城</router-link>
       </i-menu-item>
     </div>
-  </i-menu>
+  </i-menu> -->
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <div class="container">
+
+
+      <!-- User account -->
+      <div class="pull-right user-login">
+        <a class="btn btn-sm btn-darkgreen btn-outline btn-round text-darkgreen" href="/index/show"> 首页 </a>
+        <a class="btn btn-sm btn-darkgreen btn-outline btn-round text-darkgreen" href="/index/login"> 登录 </a>
+        <a class="btn btn-sm btn-darkgreen btn-outline btn-round text-darkgreen" href="/index/register"> 注册 </a>
+      </div>
+      <!-- END User account -->
+
+    </div>
+  </nav>
+  <!-- END Navigation bar -->
 </template>
 
 <script>

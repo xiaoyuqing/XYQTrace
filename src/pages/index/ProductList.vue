@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div>
-      <search-box></search-box>
-    </div>
-    <div class="search-result">
+    <search-box></search-box>
+    <!-- <div class="search-result">
       <div class="result" v-for="(item,$index) in product" :key="$index">
         <div>
           <a href="">
@@ -18,7 +16,38 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
+    <!-- Main container -->
+    <main>
+      <!-- Categories -->
+      <section class="bg-alt">
+        <div class="container">
+          <div class="related-search">
+            相关搜索：
+            <a href="" class="btn btn-default text-muted btn-outline btn-sm btn-xs">茶罐头</a>
+            <a href="" class="btn btn-default text-muted btn-outline btn-sm">茶水果</a>
+            <a href="" class="btn btn-default text-muted btn-outline btn-sm">茶水果</a>
+          </div>
+          <!--list-->
+          <div class="row">
+            <div class="col-md-3" v-for="(item,$index) in product" :key="$index">
+              <a @click="goToProductDetail(item.id)" class="search-box">
+                <img src="../../images/07.jpg" alt="">
+                <h6 @click="goToProductDetail(item.id)">{{item.company.name}}</h6>
+                <p @click="goToProductDetail(item.id)">{{item.name}}</p>
+                <p @click="goToProductDetail(item.id)">{{item.introduction}}</p>
+              </a>
+            </div>
+
+          </div>
+          <!--页码-->
+
+        </div>
+      </section>
+      <!-- END Categories -->
+
+    </main>
+    <!-- END Main container -->
     <Row type="flex" justify="center">
       <page :total='total' :pageSize='size' @on-change="change"></page>
     </Row>
@@ -42,17 +71,6 @@
           }
         }
       }
-      // product: {
-      //   get: function () {
-      //     if (this.data.length > 0) {
-      //       return this.data
-      //     } else {
-      //       if (this.productList) {
-      //         return this.productList.rows
-      //       }
-      //     }
-      //   }
-      // }
     },
     data () {
       return {
@@ -63,17 +81,11 @@
         product: []
       }
     },
-    created () {
-      this.$store.dispatch('loadProductDetail')
+    mounted () {
+      // this.$store.dispatch('loadProductDetail')
       this.product = this.productList.rows
       console.log(this.productList)
     },
-    // mounted () {
-    //   this.$store.dispatch('loadProductDetail')
-    //   console.log(this.productList)
-    //   this.total = this.productList.total
-    //   this.product = this.productList.rows
-    // },
     methods: {
       change (page) {
         localStorage.setItem('searchContext', this.name)
@@ -83,7 +95,7 @@
           size: this.size}})
         .then((res) => {
           let data = res.data
-          this.data = data.rows
+          this.product = data.rows
         })
       },
       goToProductDetail (id) {
@@ -92,12 +104,6 @@
     },
     components: {
       SearchBox
-    },
-    watch: {
-      data: function (newvalue) {
-        console.log(111)
-        this.product = newvalue
-      }
     }
   }
 </script>

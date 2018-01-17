@@ -1,4 +1,2 @@
-
-@import "./component/show.css";
-@import "./component/foot.css";
 @import "./pages/app.css";
+@import "./component/show.css";

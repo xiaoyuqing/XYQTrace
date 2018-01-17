@@ -43,7 +43,7 @@
     width: 25rem;
     margin-top: 2rem;
     text-align: center;
-  } 
+  }
   .main-page .feature p{
     margin: 2rem 0;
   }
@@ -150,6 +150,9 @@
     opacity: 1;
 }
 /*搜索*/
+.site-header {
+  background-image: url(../../images/bg-banner1.jpg);
+}
 .search-box{
     padding: 30px 20px;
     border: 1px solid #eee;

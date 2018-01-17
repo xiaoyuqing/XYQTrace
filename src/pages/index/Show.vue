@@ -136,6 +136,8 @@
 </template>
 
 <script>
+  import '../../../static/printer/zoom.js'
+  import '../../../static/printer/custom.js'
   import SearchBox from '../../components/base/SearchBox.vue'
   export default {
     name: 'show',

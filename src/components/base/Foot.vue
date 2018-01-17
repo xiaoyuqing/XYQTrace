@@ -1,29 +1,41 @@
 <template>
-  <div class='foot'>
-    <div class='webNav'>
-      <div>
-        <h1><span>中科院食品安全防伪追溯系统</span></h1>
-        <ul>
-          <li><a href='http://www.zky315.com/farming'>中科院食品安全联众肉制品追溯系统</a></li>
-          <li><a href='http://www.zky315.com/dexing'>中科院食品安全德兴肉制品追溯系统</a></li>
-          <li><a href='http://www.zky315.com/maofeng'>中科院食品安全茂丰肉制品追溯系统</a></li>
-          <li><a href='http://www.zky315.com/farming'>关于我们</a></li>
-        </ul>
+  <div>
+  <!-- Site footer -->
+  <footer class="site-footer">
+
+    <!-- Bottom section -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <div class="site-footer-link">
+              <a href="" class=""><img src="../../images/weichat_hover.png" alt=""></a>
+              <a href="" class=""><img src="../../images/weibo_hover.png" alt=""></a>
+              <a href="" class=""><img src="../../images/qq_hover.png" alt=""></a>
+            </div>
+            <div class='bdsharebuttonbox'>
+              <a href='#' class='bds_more' data-cmd='more'></a>
+              <a href='#' class='bds_weixin' data-cmd='weixin' title='分享到微信'></a>
+              <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+              <a href='#' class='bds_tsina' data-cmd='tsina' title='分享到新浪微博'></a>
+              <a href='#' class='bds_qzone' data-cmd='qzone' title='分享到QQ空间'></a>
+              <a href='#' class='bds_tqq' data-cmd='tqq' title='分享到腾讯微博'></a>
+              <a href='#' class='bds_renren' data-cmd='renren' title='分享到人人网'></a>
+            </div>
+            <p class="copyright-text">咨询电话：0755-86392168  投诉电话：13392165716</p>
+            <p class="copyright-text">Copyrights &copy; 中科院食品安全防伪追溯系统 粤ICP备15107311号</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class='bottom center'>
-      <p>备案号:粤ICP备15107311号</p>
-      <p>分享</p>
-      <div class='bdsharebuttonbox'>
-        <a href='#' class='bds_more' data-cmd='more'></a>
-        <a href='#' class='bds_weixin' data-cmd='weixin' title='分享到微信'></a>
-        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-        <a href='#' class='bds_tsina' data-cmd='tsina' title='分享到新浪微博'></a>
-        <a href='#' class='bds_qzone' data-cmd='qzone' title='分享到QQ空间'></a>
-        <a href='#' class='bds_tqq' data-cmd='tqq' title='分享到腾讯微博'></a>
-        <a href='#' class='bds_renren' data-cmd='renren' title='分享到人人网'></a>
-      </div>
-    </div>
+    <!-- END Bottom section -->
+
+  </footer>
+  <!-- END Site footer -->
+
+  <!-- Back to top button -->
+  <a id="scroll-up" href="#"><i class="ti-angle-up"></i></a>
+  <!-- END Back to top button -->
   </div>
 </template>
 <script>

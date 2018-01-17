@@ -1,12 +1,13 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import './style/index.css'
 import Vue from 'vue'
 import Index from './Index'
 import 'bootstrap/dist/js/bootstrap.min'
-import 'bootstrap/dist/css/bootstrap.css'
+// import '../static/printer/app.min.js'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+import './style/index.css'
 
 import store from './store/index'
 import router from './router/router'
