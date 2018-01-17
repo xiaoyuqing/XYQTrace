@@ -1,0 +1,36 @@
+.foot{
+    background-color: #4c4c4c;
+    padding-bottom: 2rem;
+  }
+  .foot .webNav{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .foot h1{
+    color:#fff;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  .foot h1 span{
+    border-bottom: 1px solid #fff;
+  }
+  .foot ul li{
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .center{
+    text-align: center;
+  }
+  .bottom{
+    margin:4rem 0 0 0;
+  }
+  .bottom p{
+    color:#fff;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .bdsharebuttonbox{
+    display: flex;
+    justify-content: center;
+  }
