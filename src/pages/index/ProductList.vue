@@ -40,6 +40,9 @@
             </div>
 
           </div>
+          <Row type="flex" justify="center">
+            <page :total='total' :pageSize='size' @on-change="change"></page>
+          </Row>
           <!--页码-->
 
         </div>
@@ -47,10 +50,7 @@
       <!-- END Categories -->
 
     </main>
-    <!-- END Main container -->
-    <Row type="flex" justify="center">
-      <page :total='total' :pageSize='size' @on-change="change"></page>
-    </Row>
+    <!-- END Main container -->  
   </div>
 </template>
 <script>

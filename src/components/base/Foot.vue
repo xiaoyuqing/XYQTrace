@@ -9,9 +9,9 @@
         <div class="col-md-12">
           <div class="text-center">
             <div class="site-footer-link">
-              <a href="" class=""><img src="../../images/weichat_hover.png" alt=""></a>
-              <a href="" class=""><img src="../../images/weibo_hover.png" alt=""></a>
-              <a href="" class=""><img src="../../images/qq_hover.png" alt=""></a>
+              <a class=""><img src="../../images/weichat_hover.png" alt=""></a>
+              <a class=""><img src="../../images/weibo_hover.png" alt=""></a>
+              <a class=""><img src="../../images/qq_hover.png" alt=""></a>
             </div>
             <div class='bdsharebuttonbox'>
               <a href='#' class='bds_more' data-cmd='more'></a>
@@ -78,5 +78,7 @@
 </script>
 
 <style>
-
+.bdshare-button-style0-24 a, .bdshare-button-style0-24 .bds_more {
+  float: none !important;
+}
 </style>
