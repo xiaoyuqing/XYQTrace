@@ -8,8 +8,8 @@
         <img :src="path + company.logo" />
         <img :src="path + company.qualification" />
       </div>
-    </div> -->
-    <Button type="primary" class="comment-btn" @click="goToComment">评论</Button>
+    </div>
+    <Button type="primary" class="comment-btn" @click="goToComment">评论</Button> -->
     <!-- Main container -->
     <main>
 
@@ -141,7 +141,6 @@
                   </div>
                 </div>
 
-
               </div>
 
               <!--评论-->
@@ -157,9 +156,9 @@
                       <!--表单-->
                       <div class="">
                         <div class="input-group">
-                          <textarea class="form-control form-control-pinglun" rows="3" placeholder="说两句吧……"></textarea>
+                          <textarea class="form-control form-control-pinglun" rows="3" placeholder="说两句吧……" v-model="commentText"></textarea>
                           <span class="input-group-btn">
-                            <button class="btn btn-green" type="button">评论</button>
+                            <button class="btn btn-green" type="button" @click="addComment">评论</button>
                           </span>
                         </div>
                       </div>
@@ -201,12 +200,12 @@
                     </ul>
                   </li>
 
-                  <li class="comment">
+                  <li class="comment" v-for="item in commentList" :key="index">
                     <img class="avatar" src="../../images/14.jpg" alt="...">
                     <div class="comment-body">
                       <a class="reply-link" href="#">回复</a>
                       <h6><span class="text-green">某某某</span> <time datetime="2018-01-11 12:12:12">2018-01-11 12:12:12</time></h6>
-                      <p>我们的创始人创办本公司是为了维护小企业的利益，他们相信互联网能够创造公平的竞争环境，让小企业通过创新与科技扩展业务，并在参与国内或全球市场竞争时处于更有利的位置。</p>
+                      <p>{{item.comment}}</p>
                     </div>
                   </li>
 
@@ -223,7 +222,6 @@
 
                 <a href="" class="btn btn-block btn-default text-muted">查看更多评论</a>
               </div>
-
 
             </div>
           </div>
@@ -258,7 +256,9 @@
       })
     },
     mounted () {
+      window.document.title = '详情'
       this.getCompanyDetail()
+      this.getComments()
     },
     methods: {
       getCompanyDetail () {
@@ -267,8 +267,20 @@
           this.company = res.data.company
         })
       },
-      goToComment () {
-        this.$router.push({path: '/index/comment/' + this.productId})
+      getComments () {
+        axios.get(requestInShow.GET_COMMENTS, {params: {product_id: this.$route.params.id}})
+          .then((res) => {
+            this.commentList = res.data
+          })
+      },
+      addComment () {
+        axios.post(requestInShow.ADD_COMMENT, {product_id: this.$route.params.id, customer_id: this.user.id, comment: this.commentText})
+          .then((res) => {
+            if (res.status === 200) {
+              this.$Message.info('添加成功')
+              this.getComments()
+            }
+          })
       }
     },
     components: {
@@ -288,4 +300,3 @@
   right: 0px;
 }
 </style>
-

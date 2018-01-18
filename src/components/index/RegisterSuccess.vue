@@ -9,15 +9,15 @@
 </template>
 
 <script>
-  import Row from 'iview/src/components/grid/row'
-  import ICol from 'iview/src/components/grid/col'
-  import IButton from 'iview/src/components/button/button'
+  // import Row from 'iview/src/components/grid/row'
+  // import ICol from 'iview/src/components/grid/col'
+  // import IButton from 'iview/src/components/button/button'
 
   export default {
     components: {
-      ICol,
-      Row,
-      IButton
+      // ICol,
+      // Row,
+      // IButton
     },
     name: 'register-success',
     methods: {

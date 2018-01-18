@@ -7,13 +7,13 @@
 
 <script>
   import IndexNavBar from '../components/index/IndexNavBar'
-  import Row from 'iview/src/components/grid/row'
-  import ICol from 'iview/src/components/grid/col'
+  // import Row from 'iview/src/components/grid/row'
+  // import ICol from 'iview/src/components/grid/col'
 
   export default {
     components: {
-      ICol,
-      Row,
+      // ICol,
+      // Row,
       IndexNavBar
     },
     computed: {

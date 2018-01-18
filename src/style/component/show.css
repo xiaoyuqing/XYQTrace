@@ -1,88 +1,67 @@
-/* .top-banner{
-    background: url('../../images/thememain.jpg') no-repeat;
-    min-height: 41rem;
-  }
-  .logo{
-    padding-top: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo h1{
-    font-size: 3rem;
-    color: white;
-    font-weight: bolder;
-    margin-left: 1rem;
-  }
-  .searchBox{
-    margin-top:20px;
-    display: flex;
-    justify-content: center;
-  }
-  .searchBox input{
-    min-height: 3rem;
-    min-width: 36rem;
-    border: solid 0.2rem #ebcf33;
-    padding: 3px 10px;
+body{
+    font-family: "open sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.site-header:before{
+    background-color: rgba(0, 24, 40, .15);
+}
+.text-black{
+    color: #000;
+}
+.text-darkgreen{
+    color: #003a35;
+}
+.btn{
+    font-weight: 100;
+}
+.site-header-cheng.size-lg{
+padding: 150px 0;
+}
+.category-grid a:hover{
+    background-color: #005c2b;
+    border-color: #005c2b;
+}
+.site-footer{
+    background-color:#023727;
+}
+#scroll-up{
+    background-color:#008d45 ;
+}
+.user-login a{
     font-size: 16px;
-  }
-  .searchBox button{
-    border-radius: 0 3px 3px 0;
-    border: none;
-    min-height: 3rem;
-    background-color: #ebcf33;
-    color: whitesmoke;
-    font-weight: 900;
-    font-size: 1.6rem;
-    padding: 0 2rem;
-  }
-  .main-page{
-    display: flex;
-  }
-  .main-page .feature{
-    width: 25rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-  .main-page .feature p{
-    margin: 2rem 0;
-  }
-  .main-page .feature b{
-    font-size: 2rem;
-    font-weight: 700;
-  }
-  .main-page .feature span{
-    font-size: 1.3rem;
-    line-height: 2.5rem;
-  }
-  .box{
-    margin: 0 auto;
-    display: flex;
-  }
-  .add{
-    text-align: center;
-    margin: 3rem 0 1rem 0;
-  }
-  .company{
-    background-color: #e6e7e2;
-    padding:1rem 0 10rem;
-  }
-  .company h1{
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  .company-contain{
-    display: flex;
-    justify-content: space-around;
-  }
-  .company-contain .company-item{
-    height: 15rem;
-  }
-  .company-contain .company-item img{
-    height: 100%;
-    width: auto;
-  }*/
-  .zoomify-shadow {
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover{
+    background: #023727;
+}
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover{
+    background: #023727;
+}
+.text-green{
+    color: #00622f;
+}
+.section-header h2:after, .section-header h3:after {
+    background-color: #00622f;
+    content: "";
+}
+.category-grid a:hover{
+    background: none;
+    border-color: inherit;
+    -webkit-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, .1);
+}
+.category-grid a:hover h6
+{
+    color: #55595c;
+}
+.category-grid a:hover p {
+    color: #96a2b2;
+}
+.category-grid a:hover h6:after{
+    background-color: #00622f;
+}
+.text-danger {
+    color: #df0c03;
+}
+.zoomify-shadow {
     position: fixed;
     top: 0;
     left: 0;
@@ -320,67 +299,7 @@ text-align: center;
         margin-bottom: 15px;
     }
 }
-
-body{
-    font-family: "open sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-.site-header:before{
-    background-color: rgba(0, 24, 40, .15);
-}
-.text-black{
-    color: #000;
-}
-.text-darkgreen{
-    color: #003a35;
-}
-.btn{
-    font-weight: 100;
-}
-.site-header-cheng.size-lg{
-padding: 150px 0;
-}
-.category-grid a:hover{
-    background-color: #005c2b;
-    border-color: #005c2b;
-}
-.site-footer{
-    background-color:#023727;
-}
-#scroll-up{
-    background-color:#008d45 ;
-}
-.user-login a{
-    font-size: 16px;
-}
-.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover{
-    background: #023727;
-}
-.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover{
-    background: #023727;
-}
-.text-green{
-    color: #00622f;
-}
-.section-header h2:after, .section-header h3:after {
-    background-color: #00622f;
-    content: "";
-}
-.category-grid a:hover{
-    background: none;
-    border-color: inherit;
-    -webkit-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, .1);
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, .1);
-}
-.category-grid a:hover h6
-{
-    color: #55595c;
-}
-.category-grid a:hover p {
-    color: #96a2b2;
-}
-.category-grid a:hover h6:after{
-    background-color: #00622f;
-}
-.text-danger {
-    color: #df0c03;
+// 分页的颜色
+.ivu-page-item-active {
+  background-color: #023727;
 }

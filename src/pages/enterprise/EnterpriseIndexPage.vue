@@ -97,20 +97,20 @@
 </template>
 
 <script>
-  import Row from 'iview/src/components/grid/row'
-  import ICol from 'iview/src/components/grid/col'
-  import IMenu from 'iview/src/components/menu/menu'
-  import Submenu from 'iview/src/components/menu/submenu'
-  import IMenuItem from 'iview/src/components/menu/menu-item'
+  // import Row from 'iview/src/components/grid/row'
+  // import ICol from 'iview/src/components/grid/col'
+  // import IMenu from 'iview/src/components/menu/menu'
+  // import Submenu from 'iview/src/components/menu/submenu'
+  // import IMenuItem from 'iview/src/components/menu/menu-item'
   import {lsKeyInEnterprise, lsKeyInStore} from '../../util/const'
 
   export default {
     components: {
-      IMenuItem,
-      Submenu,
-      Row,
-      ICol,
-      IMenu
+      // IMenuItem,
+      // Submenu,
+      // Row,
+      // ICol,
+      // IMenu
     },
     name: 'enterprise-index-page',
     data () {

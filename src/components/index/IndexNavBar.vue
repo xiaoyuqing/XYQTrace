@@ -50,17 +50,18 @@
 </template>
 
 <script>
-  import IMenu from '../../../node_modules/iview/src/components/menu/menu.vue'
-  import IMenuItem from '../../../node_modules/iview/src/components/menu/menu-item.vue'
+  // import IMenu from '../../../node_modules/iview/src/components/menu/menu.vue'
+  // import IMenuItem from '../../../node_modules/iview/src/components/menu/menu-item.vue'
+
+  // import Submenu from 'iview/src/components/menu/submenu'
   import {mapGetters} from 'vuex'
-  import Submenu from 'iview/src/components/menu/submenu'
 
   export default {
     name: 'index-nav-bar',
     components: {
-      Submenu,
-      IMenuItem,
-      IMenu
+      // Submenu,
+      // IMenuItem,
+      // IMenu
     },
     computed: {
       ...mapGetters({

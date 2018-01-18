@@ -26,25 +26,25 @@
   import axios from 'axios'
   import {lsKeyInStore, requestInIndex, lsKeyInEnterprise, requestInStore} from '../../util/const'
   import {mapGetters} from 'vuex'
-  import IForm from 'iview/src/components/form/form.vue'
-  import FormItem from 'iview/src/components/form/form-item.vue'
-  import IInput from 'iview/src/components/input/input.vue'
-  import Row from 'iview/src/components/grid/row'
-  import ICol from 'iview/src/components/grid/col'
-  import IButton from 'iview/src/components/button/button'
-  import RadioGroup from 'iview/src/components/radio/radio-group'
-  import Radio from 'iview/src/components/radio/radio'
+  // import IForm from 'iview/src/components/form/form.vue'
+  // import FormItem from 'iview/src/components/form/form-item.vue'
+  // import IInput from 'iview/src/components/input/input.vue'
+  // import Row from 'iview/src/components/grid/row'
+  // import ICol from 'iview/src/components/grid/col'
+  // import IButton from 'iview/src/components/button/button'
+  // import RadioGroup from 'iview/src/components/radio/radio-group'
+  // import Radio from 'iview/src/components/radio/radio'
 
   export default {
     components: {
-      Radio,
-      RadioGroup,
-      ICol,
-      Row,
-      IForm,
-      FormItem,
-      IInput,
-      IButton
+      // Radio,
+      // RadioGroup,
+      // ICol,
+      // Row,
+      // IForm,
+      // FormItem,
+      // IInput,
+      // IButton
     },
     data () {
       return {

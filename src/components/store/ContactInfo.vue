@@ -28,21 +28,21 @@
   import axios from 'axios'
   import {lsKeyInStore, requestInStore} from '../../util/const'
   import {mapGetters} from 'vuex'
-  import Row from 'iview/src/components/grid/row'
-  import ICol from 'iview/src/components/grid/col'
-  import IForm from 'iview/src/components/form/form'
-  import FormItem from 'iview/src/components/form/form-item'
-  import IInput from 'iview/src/components/input/input'
-  import IButton from 'iview/src/components/button/button'
+  // import Row from 'iview/src/components/grid/row'
+  // import ICol from 'iview/src/components/grid/col'
+  // import IForm from 'iview/src/components/form/form'
+  // import FormItem from 'iview/src/components/form/form-item'
+  // import IInput from 'iview/src/components/input/input'
+  // import IButton from 'iview/src/components/button/button'
 
   export default {
     components: {
-      FormItem,
-      IForm,
-      ICol,
-      Row,
-      IInput,
-      IButton
+      // FormItem,
+      // IForm,
+      // ICol,
+      // Row,
+      // IInput,
+      // IButton
     },
     data () {
       const phoneCheck = (rule, value, callback) => {

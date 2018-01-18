@@ -36,17 +36,17 @@
 <script>
   import axios from 'axios'
   import {lsKeyInStore, requestInStore, constInStore} from '../../util/const'
-  import IInput from 'iview/src/components/input/input'
-  import IButton from 'iview/src/components/button/button'
-  import Row from 'iview/src/components/grid/row'
-  import ICol from 'iview/src/components/grid/col'
+  // import IInput from 'iview/src/components/input/input'
+  // import IButton from 'iview/src/components/button/button'
+  // import Row from 'iview/src/components/grid/row'
+  // import ICol from 'iview/src/components/grid/col'
 
   export default {
     components: {
-      ICol,
-      Row,
-      IInput,
-      IButton
+      // ICol,
+      // Row,
+      // IInput,
+      // IButton
     },
     data () {
       return {

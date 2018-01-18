@@ -44,7 +44,7 @@
           </form-item>
           <form-item label="company">
             <i-select v-model="company_id">
-              <i-option v-for="item in companies" :value="item.value">{{item.label}}</i-option>
+              <i-option v-for="item in companies" :key="index" :value="item.value">{{item.label}}</i-option>
             </i-select>
           </form-item>
           {{registerForm2}}
@@ -58,27 +58,27 @@
 </template>
 
 <script>
-  import Row from 'iview/src/components/grid/row'
-  import ICol from 'iview/src/components/grid/col'
-  import IForm from 'iview/src/components/form/form'
-  import FormItem from 'iview/src/components/form/form-item'
-  import IInput from 'iview/src/components/input/input'
-  import IButton from 'iview/src/components/button/button'
+  // import Row from 'iview/src/components/grid/row'
+  // import ICol from 'iview/src/components/grid/col'
+  // import IForm from 'iview/src/components/form/form'
+  // import FormItem from 'iview/src/components/form/form-item'
+  // import IInput from 'iview/src/components/input/input'
+  // import IButton from 'iview/src/components/button/button'
   import {requestInEnterprise} from '../../util/const'
   import axios from 'axios'
-  import ISelect from 'iview/src/components/select/select'
-  import IOption from 'iview/src/components/select/option'
+  // import ISelect from 'iview/src/components/select/select'
+  // import IOption from 'iview/src/components/select/option'
 
   export default {
     components: {
-      IOption,
-      ISelect,
-      FormItem,
-      IForm,
-      Row,
-      ICol,
-      IInput,
-      IButton
+      // IOption,
+      // ISelect,
+      // FormItem,
+      // IForm,
+      // Row,
+      // ICol,
+      // IInput,
+      // IButton
     },
     mounted: function () {
       axios.get(requestInEnterprise.GETCOMPANY)

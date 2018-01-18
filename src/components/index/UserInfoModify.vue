@@ -18,17 +18,17 @@
 </template>
 
 <script>
-  import Row from 'iview/src/components/grid/row'
-  import ICol from 'iview/src/components/grid/col'
-  import IForm from 'iview/src/components/form/form'
-  import FormItem from 'iview/src/components/form/form-item'
+  // import Row from 'iview/src/components/grid/row'
+  // import ICol from 'iview/src/components/grid/col'
+  // import IForm from 'iview/src/components/form/form'
+  // import FormItem from 'iview/src/components/form/form-item'
 
   export default {
     components: {
-      Row,
-      ICol,
-      FormItem,
-      IForm
+      // Row,
+      // ICol,
+      // FormItem,
+      // IForm
     },
     name: 'user-info-modify',
     data () {

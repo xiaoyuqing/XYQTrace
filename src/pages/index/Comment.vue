@@ -8,7 +8,7 @@
         <Button type="error" @click="$router.back(-1)">返回</Button>
       </Row>
       <Row>评论列表</Row>
-      <Row v-for="item in commentList">
+      <Row v-for="item in commentList" :key="index">
         {{item.comment}}
       </Row>
     </div>

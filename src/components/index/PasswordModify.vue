@@ -20,22 +20,22 @@
 </template>
 
 <script>
-  import Row from 'iview/src/components/grid/row'
-  import ICol from 'iview/src/components/grid/col'
-  import IForm from 'iview/src/components/form/form'
-  import FormItem from 'iview/src/components/form/form-item'
-  import IInput from 'iview/src/components/input/input'
-  import IButton from 'iview/src/components/button/button'
+  // import Row from 'iview/src/components/grid/row'
+  // import ICol from 'iview/src/components/grid/col'
+  // import IForm from 'iview/src/components/form/form'
+  // import FormItem from 'iview/src/components/form/form-item'
+  // import IInput from 'iview/src/components/input/input'
+  // import IButton from 'iview/src/components/button/button'
   import axios from 'axios'
 
   export default {
     components: {
-      FormItem,
-      IForm,
-      Row,
-      ICol,
-      IInput,
-      IButton
+      // FormItem,
+      // IForm,
+      // Row,
+      // ICol,
+      // IInput,
+      // IButton
     },
     name: 'password-modify',
     data () {

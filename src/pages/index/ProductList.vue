@@ -50,7 +50,7 @@
       <!-- END Categories -->
 
     </main>
-    <!-- END Main container -->  
+    <!-- END Main container -->
   </div>
 </template>
 <script>
@@ -63,32 +63,25 @@
     computed: {
       ...mapGetters({
         productList: 'getProductDetail'
-      }),
-      total: {
-        get: function () {
-          if (this.productList) {
-            return this.productList.total
-          }
-        }
-      }
+      })
     },
     data () {
       return {
-        name: '',
+        name: this.$route.query.name ? this.$route.query.name : '',
         current_page: 1,
         size: 5,
-        data: [],
-        product: []
+        product: this.produclist ? this.productList.rows : [],
+        total: this.produclist ? this.productList.total : 0
       }
     },
     mounted () {
-      // this.$store.dispatch('loadProductDetail')
+      window.document.title = '搜索结果'
+      this.$store.dispatch('loadProductDetail')
       this.product = this.productList.rows
-      console.log(this.productList)
+      this.total = this.productList.total
     },
     methods: {
       change (page) {
-        localStorage.setItem('searchContext', this.name)
         axios.get(requestInShow.SEARCH, {params: {
           name: this.name,
           current_page: page,
@@ -98,12 +91,32 @@
           this.product = data.rows
         })
       },
+      // search () {
+      //   console.log(111)
+      //   axios.get('http://localhost:3000/comments', {params: {
+      //     name: this.name
+      //   }})
+      //   .then((res) => {
+      //     let data = res.data[0]
+      //     if (data) {
+      //       this.product = res.data[0].rows
+      //     }
+      //     this.$router.push({path: '/index/productList?name=' + this.name})
+      //   })
+      // },
       goToProductDetail (id) {
         this.$router.push({path: '/index/productDetail/' + id})
       }
     },
     components: {
       SearchBox
+    },
+    watch: {
+      '$route' (to, from) {
+        console.log(this.produclist)
+        this.product = this.productList.rows
+        this.total = this.productList.total
+      }
     }
   }
 </script>
