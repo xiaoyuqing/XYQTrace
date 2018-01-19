@@ -56,7 +56,7 @@
 <script>
   import { mapGetters } from 'vuex'
   import axios from 'axios'
-  import { requestInShow } from '../../util/const'
+  // import { requestInShow } from '../../util/const'
   import SearchBox from '../../components/base/SearchBox.vue'
   export default {
     name: 'product-list',
@@ -82,28 +82,24 @@
     },
     methods: {
       change (page) {
-        axios.get(requestInShow.SEARCH, {params: {
+        // axios.get(requestInShow.SEARCH, {params: {
+        //   name: this.name,
+        //   current_page: page,
+        //   size: this.size}})
+        // .then((res) => {
+        //   let data = res.data
+        //   this.product = data.rows
+        // })
+        axios.get('http://localhost:3000/comments', {params: {
           name: this.name,
-          current_page: page,
-          size: this.size}})
+          current_page: page
+        }})
         .then((res) => {
-          let data = res.data
-          this.product = data.rows
+          if (res.data[0]) {
+            this.product = res.data[0].rows
+          }
         })
       },
-      // search () {
-      //   console.log(111)
-      //   axios.get('http://localhost:3000/comments', {params: {
-      //     name: this.name
-      //   }})
-      //   .then((res) => {
-      //     let data = res.data[0]
-      //     if (data) {
-      //       this.product = res.data[0].rows
-      //     }
-      //     this.$router.push({path: '/index/productList?name=' + this.name})
-      //   })
-      // },
       goToProductDetail (id) {
         this.$router.push({path: '/index/productDetail/' + id})
       }

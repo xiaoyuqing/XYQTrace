@@ -30,9 +30,14 @@ export default {
     }
   },
   mounted () {
+    console.log('searchs')
   },
   methods: {
     search () {
+      if (this.name === '') {
+        this.$Message.warning('请输入查询信息')
+        return
+      }
       // axios.get(requestInShow.SEARCH, {params: {
       //   name: this.name,
       //   current_page: this.current_page,
