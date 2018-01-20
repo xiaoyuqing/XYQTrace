@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { requestInShow } from '../../util/const'
 export default {
   deleteUserFromStore ({commit}) {
     commit('DELETEUSER')
@@ -62,13 +63,15 @@ export default {
   },
   productFind ({commit, state}) {
     return new Promise((resolve, reject) => {
-      axios.get('http://localhost:3000/comments', {params: {
-        name: state.searchContext
+      axios.get(requestInShow.SEARCH, {params: {
+        name: state.searchContext,
+        current_page: 1,
+        size: 10
       }})
       .then((res) => {
         let product = {}
-        if (res.data[0]) {
-          product = res.data[0]
+        if (res.data) {
+          product = res.data
         } else {
           product = {
             rows: [],

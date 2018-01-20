@@ -26,7 +26,7 @@ export default {
   data () {
     return {
       current_page: 1,
-      size: 5
+      size: 10
     }
   },
   mounted () {
@@ -50,9 +50,6 @@ export default {
       }
       let that = this
       this.productFind().then(
-        // setTimeout(() => {
-        //   this.$router.push({path: '/index/productList?name=' + this.searchContext})
-        // }, 1000)
         function () {
           that.$router.push({path: '/index/productList?name=' + that.searchContext})
         }

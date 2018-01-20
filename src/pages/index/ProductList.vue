@@ -93,13 +93,14 @@
         'productFind'
       ]),
       change (page) {
-        axios.get('http://localhost:3000/comments', {params: {
+        axios.get(requestInShow.SEARCH, {params: {
           name: this.name,
-          current_page: page
+          current_page: page,
+          size: this.size
         }})
         .then((res) => {
           if (res.data[0]) {
-            this.product = res.data[0].rows
+            this.product = res.data.rows
           }
         })
       },
