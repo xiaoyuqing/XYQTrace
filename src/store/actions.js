@@ -1,3 +1,4 @@
+import axios from 'axios'
 export default {
   deleteUserFromStore ({commit}) {
     commit('DELETEUSER')
@@ -55,5 +56,28 @@ export default {
   },
   loadProductDetail ({commit}) {
     commit('SET_PRODUCT_DETAIL')
+  },
+  setContext ({commit}, payload) {
+    commit('SET_CONTEXT', payload)
+  },
+  productFind ({commit, state}) {
+    return new Promise((resolve, reject) => {
+      axios.get('http://localhost:3000/comments', {params: {
+        name: state.searchContext
+      }})
+      .then((res) => {
+        let product = {}
+        if (res.data[0]) {
+          product = res.data[0]
+        } else {
+          product = {
+            rows: [],
+            total: 0
+          }
+        }
+        commit('SET_PRODUCT_DETAIL', product)
+        resolve()
+      })
+    })
   }
 }

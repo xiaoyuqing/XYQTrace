@@ -23,7 +23,7 @@
               <a href='#' class='bds_renren' data-cmd='renren' title='分享到人人网'></a>
             </div>
             <p class="copyright-text">咨询电话：0755-86392168  投诉电话：13392165716</p>
-            <p class="copyright-text">Copyrights &copy; 中科院食品安全防伪追溯系统 粤ICP备15107311号</p>
+            <!-- <p class="copyright-text">Copyrights &copy; 中科院食品安全防伪追溯系统 粤ICP备15107311号</p>-->
           </div>
         </div>
       </div>

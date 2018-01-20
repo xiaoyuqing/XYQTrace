@@ -67,7 +67,10 @@ export default {
   LOADDETAILTYPE (state) {
     state.detailType = JSON.parse(localStorage.getItem(lsKeyInEnterprise.DETAILTYPE))
   },
-  SET_PRODUCT_DETAIL (state) {
-    state.productDetail = JSON.parse(localStorage.getItem(lsKeyInStore.PRODUCT_Detail))
+  SET_PRODUCT_DETAIL (state, payload) {
+    state.productDetail = payload
+  },
+  UPDATE_CONTEXT (state, payload) {
+    state.searchContext = payload
   }
 }

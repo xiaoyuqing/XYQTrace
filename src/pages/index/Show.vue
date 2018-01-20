@@ -1,6 +1,5 @@
 <template>
   <div>
-    <search-box></search-box>
     <!-- <div class="main-page">
       <div class="box">
         <div class="feature">

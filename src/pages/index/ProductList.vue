@@ -1,6 +1,5 @@
 <template>
   <div>
-    <search-box></search-box>
     <!-- <div class="search-result">
       <div class="result" v-for="(item,$index) in product" :key="$index">
         <div>
@@ -54,7 +53,7 @@
   </div>
 </template>
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapActions, mapGetters } from 'vuex'
   import axios from 'axios'
   // import { requestInShow } from '../../util/const'
   import SearchBox from '../../components/base/SearchBox.vue'
@@ -76,20 +75,24 @@
     },
     mounted () {
       window.document.title = '搜索结果'
-      this.$store.dispatch('loadProductDetail')
+      if (this.$route.query.name) {
+        this.$store.commit('UPDATE_CONTEXT', this.$route.query.name)
+        let that = this
+        this.productFind().then(
+          function () {
+            that.product = that.productList.rows
+            that.total = that.productList.total
+          }
+        )
+      }
       this.product = this.productList.rows
       this.total = this.productList.total
     },
     methods: {
+      ...mapActions([
+        'productFind'
+      ]),
       change (page) {
-        // axios.get(requestInShow.SEARCH, {params: {
-        //   name: this.name,
-        //   current_page: page,
-        //   size: this.size}})
-        // .then((res) => {
-        //   let data = res.data
-        //   this.product = data.rows
-        // })
         axios.get('http://localhost:3000/comments', {params: {
           name: this.name,
           current_page: page
@@ -109,7 +112,6 @@
     },
     watch: {
       '$route' (to, from) {
-        console.log(this.produclist)
         this.product = this.productList.rows
         this.total = this.productList.total
       }
